@@ -1,0 +1,52 @@
+name: A model wasn't recognized
+description: Something landed in browse\unsorted, or was filed as the wrong family
+labels: ["classifier"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks — these are the most useful issues to get, and usually the quickest to fix.
+
+        The classifier identifies models from their tensor names, so **`tv inspect` output
+        tells me almost everything I need**. `tv` is installed alongside the app; run it
+        from a terminal, or use the path in the Install folder.
+
+  - type: input
+    id: filename
+    attributes:
+      label: File name
+      placeholder: someModel_v2_fp16.safetensors
+    validations:
+      required: true
+
+  - type: textarea
+    id: inspect
+    attributes:
+      label: Output of `tv inspect <file>`
+      description: Paste it whole — the tensor names at the bottom are the important part.
+      render: text
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Where it came from
+      description: A Hugging Face or Civitai link, if there is one. It helps me check against the real thing.
+      placeholder: https://huggingface.co/...
+
+  - type: input
+    id: expected
+    attributes:
+      label: What it should have been filed as
+      description: The family and kind, if you know them. A guess is fine.
+      placeholder: "Wan 2.2 VACE, a LoRA"
+
+  - type: input
+    id: version
+    attributes:
+      label: Tensor Village version
+      description: Shown at the bottom-left of the app window.
+      placeholder: v0.14.0
+    validations:
+      required: true
