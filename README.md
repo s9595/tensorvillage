@@ -27,6 +27,7 @@ M:\
 │   ├── diffusion_models\flux\
 │   ├── loras\krea2\
 │   ├── vae\wan21\
+│   ├── diffusers\flux\        ← whole pipelines, kept intact
 │   ├── upscale_models\esrgan\
 │   ├── detection\yolo-detect\
 │   ├── llm\qwen35\
@@ -68,10 +69,23 @@ Four decisions do the work. They're the reason this isn't another folder-scannin
   the tree lives in memory and every file is served straight from wherever it physically
   sits. That's what lets disks share one namespace — hardlinks can't cross volumes, so
   link-based approaches force your whole library onto a single drive. It also means
-  writing to `M:\Save` works literally, from any program.
+  writing to the drive's Save folder works literally, from any program.
 
 Everything else follows from those: nothing is materialized, nothing is duplicated, and
 uninstalling leaves your models exactly as they were.
+
+**Diffusers pipelines stay whole.** A diffusers model is a *folder* — `model_index.json`
+plus `unet/`, `vae/`, `text_encoder/`. Catalogued file by file it would scatter across
+four shelves under names every pipeline shares, so ten models would collide into one
+folder of numbered `diffusion_pytorch_model.safetensors` duplicates telling you nothing.
+Instead the folder is a single entry keeping its own name, appearing on the drive with its
+whole subtree intact and loadable. The pipeline class names the family; where it doesn't,
+the weights themselves are read.
+
+**Nothing is chosen for you.** Tensor Village puts nothing on your disks that you didn't
+nominate: the only thing in your profile is its own settings and catalog. The save and
+trash folders have no defaults, and Save settings tells you what's still needed rather
+than inventing somewhere.
 
 ## The app
 
@@ -89,22 +103,27 @@ a **Check for updates** button for when you'd rather not wait.
 
 ## The Save and Trash folders
 
-Both are chosen in **Settings**, and both file their contents into `kind\family`
-subfolders — so they still make sense browsed in Explorer, or after you stop using
-Tensor Village entirely.
+Both are chosen in **Settings** — there are deliberately no defaults, because both decide
+where real files of yours end up. Both file their contents into `kind\family` subfolders,
+so they still make sense browsed in Explorer, or after you stop using Tensor Village
+entirely.
 
-- **Save folder** — where models dropped into `M:\Save` end up. That drop zone is the
-  point: because the drive is a real filesystem, you can set it as your browser's
-  download folder, drag models in from Explorer or a NAS, point a trainer at it as its
-  output folder, or use `tv pull <url>`. Anything that lands is identified and filed
-  within seconds — you never decide where a model goes again. Duplicates are handled
-  (identical file discarded, same-named different file gets a ` (2)` suffix), and
-  anything that isn't a model is left alone.
+- **Save folder** — where models dropped into the drive's `Save` folder end up. That drop
+  zone is the point: because the drive is a real filesystem, you can set it as your
+  browser's download folder, drag models in from Explorer or a NAS, point a trainer at it
+  as its output folder, or use `tv pull <url>`. Anything that lands is identified and
+  filed within seconds — you never decide where a model goes again. Duplicates are handled
+  (identical file discarded, same-named different file gets a ` (2)` suffix), and anything
+  that isn't a model is left alone. Until a save folder is set there is no `Save` folder on
+  the drive at all: a drop zone that can't file anything is worse than none.
 - **Trash folder** — where Dedupe moves duplicate copies. Nothing is ever deleted; the
-  space comes back only when you empty this folder yourself.
+  space comes back only when you empty this folder yourself, which is what makes every
+  removal reversible until you're sure. Reachable in one click from the Dedupe page, the
+  tray menu, or Settings.
 
-Keep each on the same disk as the models it will hold and filing is an instant move
-rather than a multi-gigabyte copy.
+Files already on the same disk as the folder move instantly; ones from another disk are
+copied across — slower, but with a library spread over several drives some of that is
+unavoidable wherever you put them.
 
 ## Views ♥ — browse trees of your own
 
@@ -229,7 +248,8 @@ Civitai API key in Settings — the only service credentials the app uses, both 
 Reference, not a promise of completeness — the classifier gains families constantly, and
 anything it can't place is still visible in `browse\unsorted`.
 
-**Formats** — safetensors, GGUF, and PyTorch saves (`.pth` / `.pt` / `.ckpt`).
+**Formats** — safetensors, GGUF, PyTorch saves (`.pth` / `.pt` / `.ckpt`), and diffusers
+pipelines (folders with a `model_index.json`).
 
 **Image and video** — SD1.5, SD2, SDXL (+refiner), SD3, Flux and Flux.2 (incl. Klein
 4B/9B), Chroma and Chroma Radiance, Qwen-Image (+Layered), Krea 2, Z-Image, Lumina2,
