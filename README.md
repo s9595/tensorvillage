@@ -91,10 +91,9 @@ than inventing somewhere.
 
 `TensorVillage.Tray` sits in the system tray: it mounts the drive at launch, watches your
 source folders, and files any new model automatically within seconds of it landing.
-Double-click the icon for the window — **Status**, **Dedupe ♥**, **Metadata ♥**,
-**Views ♥**, **Settings**, **Tools**, **Help** and **Support**. The ♥ marks the three
-supporter features. Activity is logged to `%LOCALAPPDATA%\TensorVillage\tray.log`;
-config, catalog and licence live beside it.
+Double-click the icon for the window — **Status**, **Dedupe**, **Metadata**, **Views**,
+**Settings**, **Tools**, **Help** and **Support**. Activity is logged to
+`%LOCALAPPDATA%\TensorVillage\tray.log`; config and catalog live beside it.
 
 It checks for a new version once a day and offers it in the tray menu; Settings also has
 a **Check for updates** button for when you'd rather not wait.
@@ -125,9 +124,9 @@ Files already on the same disk as the folder move instantly; ones from another d
 copied across — slower, but with a library spread over several drives some of that is
 unavoidable wherever you put them.
 
-## Views ♥ — browse trees of your own
+## Views — browse trees of your own
 
-`browse\by-medium` and `browse\by-family` are built in and free. The **Views** tab adds
+`browse\by-medium` and `browse\by-family` are built in. The **Views** tab adds
 your own, and the point of them is what you leave *out*: a tree of everything is just
 another copy of the library.
 
@@ -162,14 +161,11 @@ that lands empty on someone else's collection teaches them the feature is broken
 Views never hide or move anything: every model is always in `models\` regardless of what
 any view says.
 
-## Free, and supporter
+## Free — all of it
 
-The core is **free forever** — no trial, no clock: the drive, classification,
-auto-filing, the Save folder, routing rules, ComfyUI wiring, Civitai previews,
-integrity verification and the audit tool.
-
-Any-size donation at **[buymeacoffee.com/lorasandlenses](https://buymeacoffee.com/lorasandlenses)**
-unlocks the rest, forever, offline, on all your machines:
+Every feature, with nothing held back: the drive, classification, auto-filing, the Save
+folder, routing rules, ComfyUI wiring, Civitai previews, integrity verification, the
+audit tool, and these three as well —
 
 - **Dedupe** — find byte-identical models across every drive and consolidate them safely.
 - **Views** — extra browse trees of your own: a layout built from `{kind}` `{family}`
@@ -179,8 +175,11 @@ unlocks the rest, forever, offline, on all your machines:
 - **Metadata editor** — set title, author, tags and trigger words, and embed preview art
   directly into a model's header (with a pan/zoom crop tool).
 
-Unlock by entering your Buy Me a Coffee email on the Support page; a license key can
-also be pasted, and works with no internet at all.
+No trial, no clock, no account, no telemetry. It never phones home.
+
+If it saved you time and you feel like it, you can
+**[buy me a coffee](https://buymeacoffee.com/lorasandlenses)** — entirely optional, and
+it unlocks nothing, because there's nothing to unlock.
 
 ![The Dedupe page](docs/images/dedupe.png)
 
@@ -229,9 +228,8 @@ tv pull <url>              download a model into the Save folder
 tv wire [comfyui-dir]      point a ComfyUI install at the drive
 tv enrich [--limit N]      hash models, fetch Civitai previews + metadata
 tv enrich <file ...>       enrich specific models (drive paths accepted)
-tv dedupe [--apply]        find identical models; --apply moves copies to trash  ♥
+tv dedupe [--apply]        find identical models; --apply moves copies to trash
 tv audit                   flag files that trigger the Windows Explorer bug below
-tv unlock <key>            activate a supporter licence
 ```
 
 The drive itself is mounted by the tray app, so there is no mount/unmount command.
@@ -323,4 +321,5 @@ to talk to me. No source lives here.
 Everything-SDK search integration, code signing (to quiet SmartScreen), deeper dedupe
 intelligence — precision siblings (fp16 vs fp8 of the same model) and epoch families —
 and the `.onnx` and `.bin` corners of the aux-model world.
+
 
