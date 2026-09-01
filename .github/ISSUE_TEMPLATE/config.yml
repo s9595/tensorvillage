@@ -1,8 +1,0 @@
-blank_issues_enabled: true
-contact_links:
-  - name: Download the latest version
-    url: https://pub-542328a810f247e88ace846e2c2a0b52.r2.dev/TensorVillage-Setup-latest.exe
-    about: Always the current release. The app also updates itself.
-  - name: Buy me a coffee
-    url: https://buymeacoffee.com/lorasandlenses
-    about: Any amount unlocks Dedupe, Views and the Metadata editor — forever, offline.
